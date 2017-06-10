@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0px; padding: 0px;}
+        #box1{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        #cover{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,.5);
+            display:none;
+        }
+        #box2{
+            width:230px;
+            height:150px;
+            background:#fff;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            margin-left: -115px;
+            margin-top: -75px;
+            font-size:14px;
+            font-family:'Microsoft yahei';
+            display: none;
+        }
+        #box2 p{
+            height:40px;
+            line-height:40px;
+        }
+        #box2 p font{
+            margin-left:10px;
+        }
+        #box2 p span{
+            margin-left:10px;
+            cursor:pointer;
+        }
+        #box2 #p1 span{
+            display:inline-block;
+            width:30px;
+            height:20px;
+            margin-left:15px;
+            position: relative;
+        }
+        #btn2{
+            left:50%;
+            margin-left:-40px;
+            box-shadow: 1px 1px 1px #000;
+            background: white;
+            width: 80px;
+            height: 25px;
+            position: absolute;
+            cursor:pointer;
+        }
+        #p1 span:hover{
+            /*border: 1px solid #000;*/
+            opacity:0.5;
+        }
+        #p2 span:hover{
+            color:#c81623;
+        }
+        #p3 span:hover{
+            color:#c81623;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var oBox=document.getElementById('box1')
+            //var oBtn=document.getElementById('btn');
+            var ocover=document.getElementById('cover');
+            var obox2=document.getElementById('box2');
+            var oBtn2=document.getElementById('btn2');
+            var oSpan=document.getElementsByTagName('span');
+            oBox.onclick=function () {
+                ocover.style.display='block';
+                obox2.style.display='block'
+            };
+
+            oBtn2.onclick=function () {
+                ocover.style.display='none';
+                obox2.style.display='none';
+            };
+
+            for(i=0;i<3;i++){
+                oSpan[i].onclick=s1;
+                oSpan[i+3].onclick=s2;
+                oSpan[i+6].onclick=s3;
+            }
+
+//            for(i=0;i<9;i++){
+//                if(i>=0 && i<3){
+//                    oSpan[i].onclick = s1;
+//                }
+//                else if(i>=3 && i<6){
+//                    oSpan[i].onclick = s2;
+//                }
+//                else {
+//                    oSpan[i].onclick = s3;
+//                }
+//
+//            };
+
+//            for(i=0;i<3;i++){
+//                    oSpan[i].onclick = s1;
+//                };
+//
+//            for(;i<6;i++){
+//                oSpan[i].onclick = s2;
+//            };
+//
+//            for(;i<9;i++){
+//                oSpan[i].onclick = s3;
+//            };
+
+            function s1(){
+                oBox.style.background = this.style.background;
+            };
+            function s2(){
+                oBox.style.width = this.innerHTML;
+            };
+            function s3(){
+                oBox.style.height = this.innerHTML
+            };
+            ocover.onclick=function () {
+                ocover.style.display='none';
+                obox2.style.display='none';
+            }
+            }
+    </script>
+</head>
+<body>
+<div id="box1"></div>
+<!--<button id='btn'>click</button>-->
+<div id="cover"></div>
+<div id="box2">
+    <p id="p1">
+        <font>背景</font>
+        <span style='background:red;'></span>
+        <span style='background:green;'></span>
+        <span style='background:blue;'></span>
+    </p>
+    <p id="p2">
+        <font>宽度</font>
+        <span>100px</span>
+        <span>200px</span>
+        <span>300px</span>
+    </p>
+    <p id="p3">
+        <font>高度</font>
+        <span>100px</span>
+        <span>200px</span>
+        <span>300px</span>
+    </p>
+    <button id="btn2">完成</button>
+</div>
+</body>
+</html>

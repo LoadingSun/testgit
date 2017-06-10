@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .t54{
+        background: red;
+        }
+        #b4{
+            background: white;
+            font-family: 微软雅黑;
+            font-size: 20px;
+        }
+        #b3{
+            border: 1px solid black;
+            height: 500px;
+            width:500px;
+        }
+        #b3 ul li{
+            list-style: none;
+            float: left;
+            margin:10px;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var pp=document.getElementById('b3');
+            var po=document.getElementById('b2');
+            po.onclick=function(){
+                pp.hidden=!pp.hidden;
+            }
+        }
+    </script>
+</head>
+<body ondblclick="document.designMode='on';">
+<article>
+<table border="50" >
+<caption class="t54"><b>疯狂java讲义系列图书</b></caption>
+<colgroup style="background: white">
+    <col style="width: 190px"/>
+    <col span="1" style="width:300px"/>
+    <col span="2" style="width:400px"/>
+</colgroup>
+    <thead class="t54">
+    <tr>
+        <th>书名</th>
+        <th>作者</th>
+        <th>价格</th>
+    </tr>
+    </thead>
+<tfoot class="t54">
+<tr>
+    <td colspan="3" style="text-align: right">现总计：2本图书</td>
+</tr>
+</tfoot>
+<tbody class="t54">
+<tr>
+    <td><a href="https://www.baidu.com/">疯狂Java讲义</a></td>
+    <td>李刚</td>
+    <td>112</td>
+</tr>
+<tr>
+    <td>java ee<mark id="b4">啊啊啊</mark>图书</td>
+    <td>李刚</td>
+    <td>24</td>
+</tr>
+<tr>
+    <td>asfgasg</td>
+    <td>asfa</td>
+    <td>352</td>
+</tr>
+</tbody>
+</table>
+<iframe src="t1.html" width="200" height="120"></iframe>
+<aside>
+    <h3>手电筒郭达</h3>
+    <section>
+        <div>撒旦噶说</div>
+        <div>的三国杀的</div>
+        <div>2152367374</div>
+    </section>
+</aside>
+</article>
+<div id="b3" hidden="true" style="height:80px">
+    <ul>
+        <li>qwrqr</li>
+        <li>啥都好说东方红</li>
+        <Li>dshysh</Li>
+        <Li>dshysh</Li>
+        <Li>dshysh</Li>
+        <Li>dshysh</Li>
+        <Li>dshysh</Li>
+        <Li>dshysh</Li>
+        <Li>dshysh</Li>
+        <Li>dshysh</Li>
+        <Li>dshysh</Li>
+        <Li>dshysh</Li>
+        <Li>dshysh</Li>
+        <Li>dshysh</Li>
+        <Li>dshysh</Li>
+        <Li>dshysh</Li>
+    </ul>
+</div>
+<input id=b2 type="button" value="显示隐藏"/>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width:200px;height:200px;background:red;
+        }
+    </style>
+    <script>
+        /*function toblue() {
+            var odiv = document.getElementById('div1');
+            odiv.style.background = 'blue';
+        }
+        function togreen() {
+            var odiv = document.getElementById('div1');
+            odiv.style.background = 'green';
+        }
+        function toyellow() {
+                    var odiv=document.getElementById('div1');
+                    odiv.style.background='yellow';
+        }*/
+        function setColor(color) {
+            var odiv=document.getElementById('div1');
+            odiv.style.background=color;
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="变蓝" onmouseover="setColor('blue')"/>
+<input type="button" value="变绿" onmouseover="setColor('green')"/>
+<input type="button" value="变黄" onmouseover="setColor('yellow')"/>
+<div id="div1">
+</div>
+</body>
+</html>

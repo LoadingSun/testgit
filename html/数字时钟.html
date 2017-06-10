@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    #box1{
+        background: black;
+        color:white;
+        font-size: 50px;
+        width:500px;
+        height:100px;
+    }
+    </style>
+    <script>
+        function todou(n) {
+            if(n<10){
+                return '0'+n
+            }
+            else {
+                return ''+n
+            }
+        }
+        window.onload=function () {
+            var box=document.getElementById('box1');
+            var aImg=box.getElementsByTagName('img');
+            function tick() {
+                var odate=new Date();
+                var str=todou(odate.getHours())+todou(odate.getMinutes())+todou(odate.getSeconds());
+                //var str='141436'
+                //alert(str);
+                for(i=0; i<aImg.length; i++){
+                    aImg[i].src='../images/'+str.charAt(i)+'.png';/*str[i]*/
+                }
+            }
+            setInterval(tick,1000);
+            tick();
+        }
+        /*获取系统时间
+        date对象
+        gethours,getminutes,getseconds*/
+        /*date获取
+        getfullyear年
+        getmonth()+1月
+        getdate日
+        getday星期*/
+    </script>
+</head>
+<body>
+<div id="box1">
+<img src="../images/0.png"/>
+<img src="../images/0.png"/>
+:
+<img src="../images/0.png"/>
+<img src="../images/0.png"/>
+:
+<img src="../images/0.png"/>
+<img src="../images/0.png"/>
+</div>
+</body>
+</html>

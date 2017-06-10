@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+    <title></title>
+    <meta http-equiv="content" content="text/html" charset="utf-8"/>
+    <style type="text/css">
+        #div1
+        {
+            background-image:url("../images/2.png");
+            background-repeat: no-repeat;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+        }
+    </style>
+
+</head>
+
+<body>
+<div id="div1" style="top: 600px;left: 300px;">
+
+</div>
+<script type="text/javascript">
+    document.onkeydown=function(event)
+    {
+        if(event.keyCode==37)
+        {
+            f1();
+
+        }
+        else if (event.keyCode==39)
+        {
+            f2();
+        }
+        else if(event.keyCode==38)
+        {
+            f3();
+        }
+        else if(event.keyCode==40)
+        {
+            f4();
+        }
+    }
+    function f1()
+    {
+        var a=document.getElementById("div1").style.left;
+        var b= parseInt(a.substr(0, a.length-2));
+        if(b>0)
+        {
+            b=b-100;
+            document.getElementById("div1").style.left=b+"px";
+        }
+    }
+    function f2()
+    {
+        var a1=document.getElementById("div1").style.left;
+        var b1=parseInt(a1.substr(0,a1.length-2));
+        if(b1<600)
+        {
+            b1=b1+100;
+            document.getElementById("div1").style.left=b1+"px";
+        }
+    }
+    function f3()
+    {
+        var a1=document.getElementById("div1").style.top;
+        var b1=parseInt(a1.substr(0,a1.length-2));
+        if(b1>0)
+        {
+            b1=b1-100;
+            document.getElementById("div1").style.top=b1+"px";
+        }
+    }
+    function f4()
+    {
+        var a1=document.getElementById("div1").style.top;
+        var b1=parseInt(a1.substr(0,a1.length-2));
+        if(b1<=800)
+        {
+            b1=b1+100;
+            document.getElementById("div1").style.top=b1+"px";
+        }
+    }
+</script>
+</body>
+</html>

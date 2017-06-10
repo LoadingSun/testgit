@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*css(odiv,'width')获取样式
+          css(odiv,'width','200px')设置样式
+         */
+        function css(obj,name,value) {
+            if(arguments.length==2){
+                return obj.style[name]
+            }
+            else{
+                obj.style[name]=value
+            }
+        }
+        window.onload=function () {
+            var odiv=document.getElementById('box1')
+            alert(css(odiv,'background'))
+            css(odiv,'width','500px')
+            css(odiv,'background','green')
+        }
+    </script>
+</head>
+<body>
+<div id="box1" style="width:200px; height: 200px; background: red;"></div>
+</body>
+</html>

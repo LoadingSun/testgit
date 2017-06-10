@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+    *{margin: 0;padding: 0}
+    #box{
+        width: 100px;
+        height: 100px;
+        background: red;
+        /*margin-left: 600px;*/
+    }
+</style>
+</head>
+<body>
+<div id="box"></div>
+<script>
+    var obox=document.getElementById('box');
+    move(obox,'marginLeft','400',5);
+    function move(obj,attr,target,speed) {
+        var val=parseInt(getstyle(obj,attr));
+        var onoff=true;
+        if(val>target){
+            speed=-speed;
+            onoff=false
+        }
+        var timer=setInterval(function () {
+            val+=speed;
+            if(onoff){
+                if(val>=target){
+                    val=target;
+                    clearInterval(timer);
+                }
+            }
+            else {
+                if(val<=target){
+                    val=target;
+                    clearInterval(timer);
+                }
+            }
+            obj.style[attr]=val+'px';
+        },1000);
+        function getstyle(obj,attr) {
+            return obj.currentStyle?obj.currentStyle[attr]:getComputedStyle(obj)[attr];
+        }
+        console.log(getstyle(obox,'width'))
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width:200px; height:200px; background:black;
+        }
+    </style>
+    <script>
+        function setolor() {
+            var abc=document.getElementById('div1');
+            abc.style.background='green';
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="变黄" onclick="setolor()"/>
+<input type="button" value="变红" onclick="setolor()"/>
+<input type="button" value="变绿" onclick="setolor()"/>
+<div id="div1">
+</div>
+</body>
+</html>

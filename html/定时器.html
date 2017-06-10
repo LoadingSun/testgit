@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function () {
+            var obtn1=document.getElementById('btn1');
+            var obtn2=document.getElementById('btn2');
+            var timer=null;
+            obtn1.onclick=function () {
+                timer=setInterval(function () {
+                    alert('a')
+                },1000)
+            }
+            obtn2.onclick=function () {
+                clearInterval(timer);
+            }
+        }
+        /*setInterval()间隔型
+        setTimeout()延时型
+        停止定时器
+        clearInterval()
+        clearTimeout()*/
+    </script>
+</head>
+<body>
+<input id="btn1" type="button" value="开启"/>
+<input id="btn2" type="button" value="关闭"/>
+</body>
+</html>
